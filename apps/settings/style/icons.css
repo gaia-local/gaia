@@ -74,6 +74,10 @@
   background-position: -55rem 0;
 }
 
+#menuItem-resetDevice::before {
+  background-position: -60rem 0;
+}
+
 #menuItem-sound::before {
   background-position: -65rem 0;
 }
@@ -82,7 +86,7 @@
   background-position: -70rem 0;
 }
 
-#menuItem-mediaStorage::before {
+#menuItem-storage::before {
   background-position: -70rem 0;
 }
 
