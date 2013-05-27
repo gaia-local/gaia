@@ -13,6 +13,16 @@ html, body {
   overflow: hidden;
 }
 
+#center-seperator {
+  position: absolute;
+  background-image: url(images/shadow_column.png);
+  background-repeat: repeat-y;
+  left: 49.4rem;
+  top: 0;
+  width: 0.6rem;
+  height: 100%;
+}
+
 
 /******************************************************************************
  * Setting panels: full-size <section role="region"> blocks
