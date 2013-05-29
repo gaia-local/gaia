@@ -284,6 +284,10 @@ body {
   animation: openApp 3s forwards ease;
 }
 
+#screen.immediate-transition > #windows > .appWindow.opening {
+  animation: fastopenApp 0.00001s forwards ease;
+}
+
 #screen.cards-view > #windows > .appWindow.opening {
   animation: openAppFromCardView 0.15s forwards ease;
 }
@@ -295,6 +299,12 @@ body {
 /* Opacity increases start up time then we don't use it anymore for opening */
 @keyframes openApp {
   0%   { transform: scale(0.1) }
+  100% { transform: scale(1.0) }
+}
+
+/* Opacity increases start up time then we don't use it anymore for opening */
+@keyframes fastopenApp {
+  0%   { transform: scale(1.0) }
   100% { transform: scale(1.0) }
 }
 

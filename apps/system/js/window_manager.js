@@ -2164,7 +2164,14 @@ var WindowManager = (function() {
     },
     toggleHomescreen: toggleHomescreen,
     retrieveHomescreen: retrieveHomescreen,
-    screenshots: screenshots
+    screenshots: screenshots,
+    setImmediateTransition: function(enable) {
+      if(enable) {
+        screenElement.classList.add('immediate-transition');
+      } else {
+        screenElement.classList.remove('immediate-transition');
+      }
+    }
   };
 }());
 

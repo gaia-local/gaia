@@ -283,8 +283,19 @@ var LockScreenView = {
               }
             }
           } else if (target === this.areaCamera) {
-            this.musicOverlay.classList.add('touched');
-            this.musicOverlay.classList.add('show');
+            if ('WindowManager' in window) {
+              WindowManager.setImmediateTransition(true);
+              window.addEventListener('appopen', function onopened() {
+                window.removeEventListener('appopen', onopened);
+                WindowManager.setImmediateTransition(false);
+              });
+              this.lockscreen.launchMusic();
+              setTimeout(function(){
+                // Gurantee the immediate transition is turned off.
+                window.removeEventListener('appopen', onopened);
+                WindowManager.setImmediateTransition(false);
+              }, 0.1);
+            }
           }
         }
         break;
