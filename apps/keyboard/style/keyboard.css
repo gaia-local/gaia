@@ -686,3 +686,14 @@ bubble above the key when you tap and hold. */
   color: #555;
 }
 
+.portrait .keyboard-key {
+    margin: 0 0.1rem;
+}
+
+.portrait .keyboard-row > .keyboard-key:not(.num-key):first-child {
+  margin: 0 0.1rem 0 0;
+}
+
+.portrait .keyboard-row > .keyboard-key:not(.num-key):last-child {
+  margin: 0 0 0 0.1rem;
+}
